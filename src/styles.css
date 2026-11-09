@@ -254,11 +254,23 @@ img {
   gap: 12px;
 }
 
+/* Cover shows the top of the full-length home page screenshot.
+   The image is kept full-height so it can be animated (scrolled) later. */
 .card__cover {
+  position: relative;
   height: 180px;
+  overflow: hidden;
   background: var(--placeholder);
   border-radius: 20px;
   transition: transform 0.25s;
+}
+
+.card__cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .card:hover .card__cover {
