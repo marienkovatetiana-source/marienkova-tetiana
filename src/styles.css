@@ -24,6 +24,7 @@
   --lime: #dffca1;
   --lime-bright: #d8ff85;
   --green: #094020;
+  --green-text: #218500; /* link hover */
 
   /* effects */
   --shadow-soft: 0 0.6px 0.6px -0.94px rgba(0, 0, 0, 0.07),
@@ -140,14 +141,16 @@ img {
   background: var(--lime);
 }
 
-/* Ghost: text only, light fill on hover (header "LinkedIn") */
+/* Ghost: text only; on hover it fills in and looks like the soft button
+   (header "LinkedIn" next to "Resume") */
 .btn--ghost {
   color: var(--text-2);
 }
 
 .btn--ghost:hover {
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--surface);
   color: var(--ink);
+  box-shadow: var(--shadow-soft);
 }
 
 /* ---------- Badge ---------- */
@@ -228,13 +231,12 @@ img {
 
 .header__nav a {
   padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  transition: background-color var(--ease), color var(--ease);
+  transition: color var(--ease);
 }
 
+/* green text on hover, like the reference */
 .header__nav a:hover {
-  background: rgba(0, 0, 0, 0.04);
-  color: var(--ink);
+  color: var(--green-text);
 }
 
 .header__actions {
