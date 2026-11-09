@@ -141,14 +141,14 @@ img {
   background: var(--lime);
 }
 
-/* Ghost: text only; on hover it fills in and looks like the soft button
-   (header "LinkedIn" next to "Resume") */
+/* Ghost: text only; on hover it gets the same lime fill as "Resume"
+   (header "LinkedIn") */
 .btn--ghost {
   color: var(--text-2);
 }
 
 .btn--ghost:hover {
-  background: var(--surface);
+  background: var(--lime);
   color: var(--ink);
   box-shadow: var(--shadow-soft);
 }
@@ -290,6 +290,33 @@ main {
   line-height: 1.1;
   letter-spacing: -1.6px;
   color: var(--ink);
+}
+
+.hero__title {
+  position: relative;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Hand-drawn decorations (static, no animation) */
+.doodle {
+  flex: none;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.doodle--spark {
+  position: absolute;
+  left: -38px;
+  top: -26px;
+}
+
+.doodle--swirl {
+  margin-top: 6px;
 }
 
 .hero__lead {
@@ -507,6 +534,12 @@ main {
   .hero__title {
     font-size: 36px;
     letter-spacing: -0.8px;
+  }
+  .doodle--spark {
+    left: -10px;
+    top: -34px;
+    width: 30px;
+    height: 30px;
   }
   .hero__lead {
     font-size: 18px;
