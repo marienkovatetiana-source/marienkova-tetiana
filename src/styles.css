@@ -212,6 +212,7 @@ img {
 
 /* lime halo behind the avatar, like the reference */
 .header__brand img {
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--lime);
 }
@@ -297,51 +298,54 @@ main {
   color: var(--text-muted);
 }
 
-/* Portrait placeholder card, tilted 3° */
+/* Portrait photo card, tilted 3° */
 .portrait {
+  position: relative;
   flex: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 380px;
   height: 470px;
   margin: 10px 12px;
-  padding: 28px;
-  background: linear-gradient(160deg, #f4f4ef, #e9e8e0);
+  overflow: hidden;
+  background: #e9e8e0;
   border: 1px solid var(--border);
   border-radius: 32px;
   box-shadow: var(--shadow-soft);
   transform: rotate(3deg);
 }
 
+.portrait__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+/* Name plate in frosted glass at the bottom of the photo */
 .portrait__caption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
 }
 
 .portrait__name {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--ink);
 }
 
 .portrait__role {
-  font-size: 15px;
-  color: var(--text-2);
-}
-
-.portrait__label {
-  align-self: flex-start;
-  padding: 6px 14px;
-  background: var(--glass);
-  -webkit-backdrop-filter: var(--blur);
-  backdrop-filter: var(--blur);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
   color: var(--text-2);
 }
 
