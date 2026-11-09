@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetiana Marienkova — UI/UX Designer & Front-end Developer</title>
+    <meta
+      name="description"
+      content="I design and build websites for companies and entrepreneurs, so their services are easy to understand, find and choose online."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Sticky floating header -->
+    <header class="header">
+      <a class="header__brand" href="#top">
+        <img src="/images/avatar-placeholder.svg" width="36" height="36" alt="" />
+        <span>Tetiana Marienkova</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <!-- TODO: add LinkedIn URL and resume PDF -->
+        <a class="btn btn--outline btn--sm" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--primary btn--sm" href="#" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero__content">
+          <p class="badge">
+            <img src="/images/dot.svg" width="8" height="8" alt="" />
+            UI/UX Designer &amp; Front-end Developer
+          </p>
+          <h1 class="hero__title">I design and build websites for companies and entrepreneurs</h1>
+          <p class="hero__lead">so their services are easy to understand, find and choose online.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">View work</a>
+          </div>
+        </div>
+
+        <!-- Portrait placeholder: replace with the real photo later -->
+        <div class="portrait" aria-hidden="true">
+          <div class="portrait__caption">
+            <p class="portrait__name">Tetiana Marienkova</p>
+            <p class="portrait__role">UI/UX Designer &amp; Front-end Developer</p>
+          </div>
+          <p class="portrait__label">Portrait photo</p>
+        </div>
+      </section>
+
+      <!-- Selected work (preview) -->
+      <section class="work" id="work">
+        <h2 class="eyebrow">Selected work</h2>
+        <div class="work__cards">
+          <a class="card" href="#">
+            <div class="card__cover"></div>
+            <p class="card__caption"><span class="card__num">01</span> <span class="card__title">OKVADA</span></p>
+            <p class="card__type">Corporate website for a transport company</p>
+          </a>
+          <a class="card" href="#">
+            <div class="card__cover"></div>
+            <p class="card__caption"><span class="card__num">02</span> <span class="card__title">VISEORI</span></p>
+            <p class="card__type">Project for a digital agency</p>
+          </a>
+          <a class="card" href="#">
+            <div class="card__cover"></div>
+            <p class="card__caption"><span class="card__num">03</span> <span class="card__title">Plantin Beauty Studio</span></p>
+            <p class="card__type">Multi-page website for a nail studio</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
